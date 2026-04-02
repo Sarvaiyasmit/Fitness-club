@@ -4,7 +4,7 @@
         
 
         <title>Home</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css?v=7">
        
         <script src="script.js"></script>
         <style>
@@ -16,7 +16,7 @@
         <main class="image-container">
             
            <video autoplay muted loop>
-                <source src="STG_boost.mp4" type="video/mp4">
+                <source src="images/STG_boost.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
                 <div class="center-text">

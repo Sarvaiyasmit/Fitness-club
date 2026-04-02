@@ -3,7 +3,7 @@
 <head>
     <title>Home</title>
     <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=7">
 
     <style>
         b.error {
@@ -11,7 +11,7 @@
             font-size: 14px;
             display: none;
         }
-        script {
+        body {
             font: 16px Arial, sans-serif;
         }
       
@@ -159,6 +159,7 @@ document.getElementById('myForm').addEventListener('submit', function(event){
     if (isValid) {
         alert('Form submitted successfully!');
         document.getElementById('myForm').reset();
+        window.location.href = 'Page7.php';
     }
 });
 </script>

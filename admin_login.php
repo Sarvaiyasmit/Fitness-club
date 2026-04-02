@@ -3,7 +3,7 @@
 <head>
     <title>Admin Login - FITNESS CLUB</title>
     <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=7">
 
     <style>
         b.error {
@@ -11,7 +11,7 @@
             font-size: 14px;
             display: none;
         }
-        script {
+        body {
             font: 16px Arial, sans-serif;
         }
     </style>

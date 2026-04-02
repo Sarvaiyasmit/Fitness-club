@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Contact Us</title>
-    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="style.css?v=7">
     <script src="script.js"></script>
     <style>
         b.error {

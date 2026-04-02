@@ -3,7 +3,7 @@
     <head>
         
         <title>Services</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css?v=7">
         <script src="script.js"></script>
         <style>
      
@@ -18,37 +18,46 @@
             <p class="blog-text">We must be aprovied a laxury servie</p>
         </div>
         <div class="timing-services">
-    <p>Hours: Monday - Friday 6AM - 10PM, Weekends 8AM - 8PM</p>
-    <p>Phone: (555) 123-4567</p>
-  </div>
-  <h2>Available Services</h2>
-
-              <div class="service-item">
-      <h3>Personal Training</h3>
-      <p>One-on-one training sessions</p>
-      <p class="price">$60/hour</p>
-    </div>
-    <div class="service-item">
-      <h3>Group Classes</h3>
-      <p>Yoga, Pilates, Zumba, Spinning</p>
-      <p class="price">$15/class</p>
-    </div>
-    <div class="service-item">
-      <h3>Weight Training</h3>
-      <p>Access to weight room and equipment</p>
-      <p class="price">Included in membership</p>
-    </div>
-    <div class="service-item">
-      <h3>Cardio Area</h3>
-      <p>Treadmills, bikes, elliptical machines</p>
-      <p class="price">Included in membership</p>
-    </div>
-    <div class="service-item">
-      <h3>Swimming Pool</h3>
-      <p>25-meter indoor pool</p>
-      <p class="price">Included in membership</p>
-    </div>
-  </div>
+            <div class="timing-inner">
+                <p>Hours: Monday - Friday 6AM - 10PM, Weekends 8AM - 8PM</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+        </div>
+        
+        <h2 class="services-title">Available Services</h2>
+        
+        <div class="services-grid">
+            <div class="service-item">
+                <h3>Personal Training</h3>
+                <p>One-on-one training sessions tailored to you.</p>
+                <p class="price">$60/hour</p>
+            </div>
+            <div class="service-item">
+                <h3>Group Classes</h3>
+                <p>Yoga, Pilates, Zumba, and High-Energy Spinning.</p>
+                <p class="price">$15/class</p>
+            </div>
+            <div class="service-item">
+                <h3>Weight Training</h3>
+                <p>Full access to dynamic free weights and professional equipment.</p>
+                <p class="price">Included in membership</p>
+            </div>
+            <div class="service-item">
+                <h3>Cardio Area</h3>
+                <p>Premium treadmills, bikes, and elliptical machines.</p>
+                <p class="price">Included in membership</p>
+            </div>
+            <div class="service-item">
+                <h3>Swimming Pool</h3>
+                <p>Enjoy our temperature-controlled 25-meter indoor pool.</p>
+                <p class="price">Included in membership</p>
+            </div>
+            <div class="service-item">
+                <h3>Nutrition Counseling</h3>
+                <p>Personalized meal plans and diet tracking with expert coaches.</p>
+                <p class="price">$40/session</p>
+            </div>
+        </div>
 
         
         

@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>about us</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=7">
     <script src="script.js"></script>
     <style>
      
