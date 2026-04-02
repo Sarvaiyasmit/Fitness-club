@@ -1,3 +1,11 @@
+<?php
+session_start();
+// Auth Guard: Only logged-in admins can view this page
+if (!isset($_SESSION['adminLoggedIn']) || $_SESSION['adminLoggedIn'] !== true) {
+    header("Location: admin_login.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -434,13 +442,6 @@
 
 <script>
 // ============================================================
-//  AUTH GUARD
-// ============================================================
-if (localStorage.getItem('adminLoggedIn') !== 'true') {
-    window.location.href = 'admin_login.php';
-}
-
-// ============================================================
 //  SECTION NAVIGATION
 // ============================================================
 const sectionMeta = {
@@ -483,14 +484,13 @@ function animateCounter(id, target, duration) {
     }, 16);
 }
 
-window.addEventListener('DOMContentLoaded', () => {
-    animateCounter('counter-members',  128, 1200);
-    animateCounter('counter-services',   5,  800);
-    animateCounter('counter-blog',       3,  600);
-    animateCounter('counter-messages',  14, 1000);
-    renderMembers();
-    renderMessages();
-});
+// Run immediately — no DOMContentLoaded to avoid flicker
+animateCounter('counter-members',  128, 1200);
+animateCounter('counter-services',   5,  800);
+animateCounter('counter-blog',       3,  600);
+animateCounter('counter-messages',  14, 1000);
+renderMembers();
+renderMessages();
 
 // ============================================================
 //  MEMBERS DATA
@@ -616,9 +616,7 @@ function confirmDelete(name) {
 
 function doLogout() {
     if (confirm('Are you sure you want to logout?')) {
-        localStorage.removeItem('adminLoggedIn');
-        localStorage.removeItem('adminUser');
-        window.location.href = 'admin_login.php';
+        window.location.href = 'admin_logout.php';
     }
 }
 </script>
