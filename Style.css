@@ -140,17 +140,22 @@ video {
    ============================================ */
 .blog-content {
     text-align: center;
-    padding: 2rem;
-    background-color: white;
-    color: #333;
+    padding: 4rem 2rem;
+    background-color: #e6e6e6;
+    color: black;
     font-size: 2rem;
+}
+
+.blog-content h1 {
+    margin: 0;
 }
 
 .blog-text {
     font-size: 1.2rem;
-    color: #666;
+    color: #222;
     margin-top: 1rem;
 }
+
 
 .container {
     display: flex;
@@ -199,45 +204,91 @@ video {
    SERVICES SECTION
    ============================================ */
 .timing-services {
-    background-color: #ddd;
-    padding: 10px 15px;
-    margin-bottom: 25px;
-    font-size: 14px;
+    background-color: #f9f9f9;
+    padding: 20px 0;
+    margin-bottom: 50px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
+.timing-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
+    flex-wrap: wrap;
+}
+
+.timing-inner p {
+    margin: 0;
+    padding: 10px 25px;
+    background: #e6e6e6;
+    border-radius: 50px;
+}
+
+.services-title {
+    text-align: center;
+    font-size: 2.8rem;
+    color: #333;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto 80px auto;
+    padding: 0 20px;
+}
 
 .service-item {
-    padding: 15px 20px;
-    margin-bottom: 15px;
-    background-color: #f9f9f9;
+    background: #fff;
     border: 1px solid #eee;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 35px 30px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 .service-item:hover {
-    transform: scale(1.02);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: #eae8e8;
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    border-color: #ddd;
 }
 
 .service-item h3 {
-    margin: 0 0 8px;
-    font-weight: normal;
-    font-size: 18px;
-    color: #444;
+    color: #333;
+    font-size: 1.5rem;
+    margin: 0 0 15px 0;
+    font-weight: 800;
 }
 
 .service-item p {
-    margin: 0 0 8px;
-    font-size: 14px;
     color: #666;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 0 25px 0;
 }
 
-.price {
+.service-item .price {
     font-weight: bold;
-    font-size: 15px;
+    font-size: 1.25rem;
     color: #000;
+    background: #f9f9f9;
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin: auto auto 0 auto;
+    display: inline-block;
 }
 
 /* ============================================
