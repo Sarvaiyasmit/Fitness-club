@@ -1,3 +1,11 @@
+<?php
+session_start();
+// Security Guard: Prevent unauthenticated visitors from viewing the member homepage
+if (!isset($_SESSION['userLoggedIn']) || $_SESSION['userLoggedIn'] !== true) {
+    header("Location: indexpage.php");
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>

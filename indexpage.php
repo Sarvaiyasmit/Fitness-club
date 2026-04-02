@@ -1,4 +1,12 @@
-    <!DOCTYPE html>
+    <?php
+session_start();
+// Routing Guard: Send already logged-in members to their dashboard
+if (isset($_SESSION['userLoggedIn']) && $_SESSION['userLoggedIn'] === true) {
+    echo "<script>window.location.href='homepage.php';</script>";
+    exit;
+}
+?>
+<!DOCTYPE html>
     <html>
     <head>
         
