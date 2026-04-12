@@ -25,6 +25,6 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; <span>2023 EliteFit GYM.</span> All rights reserved. | <a href="#" style="color: #ddd;">Privacy Policy</a> | <a href="#" style="color: #ddd;">Terms of Service</a></p>
+            <p>&copy; <span><?= date('Y') ?> EliteFit GYM.</span> All rights reserved. | <a href="#" style="color: #ddd;">Privacy Policy</a> | <a href="#" style="color: #ddd;">Terms of Service</a></p>
         </div>
     </footer>

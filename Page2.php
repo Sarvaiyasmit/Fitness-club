@@ -1,3 +1,7 @@
+<?php
+include 'db.php';
+$blog_res = $conn->query("SELECT * FROM blog_posts ORDER BY created_at DESC");
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,32 +20,19 @@
         </div>
 
     <div class="container">
-  
-    <div class="card">
-      <img src="images/khabib.webp" alt="Gym Training">
-      <div class="card-text">
-        <div class="category">KHABIB</div>
-        <div class="title">NEW UFC TRAINING IS ALSO IN OUR GYM</div>
-     
-      </div>
-    </div>
-
-    
-    <div class="card">
-      <img src="images/yoga room.webp" alt="Workout">
-      <div class="card-text">
-        <div class="category">YOGA</div>
-        <div class="title">BEUTIFULL YOGA ROOM IS IN OUR GYM</div>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="images/ground.avif" alt="Fitness">
-      <div class="card-text">
-        <div class="category">GROUND</div>
-        <div class="title">JUST NEW GROUND ADD FOR RUNNING </div>
-      </div>
-    </div>
+        <?php if ($blog_res && $blog_res->num_rows > 0): ?>
+            <?php while($blog = $blog_res->fetch_assoc()): ?>
+            <div class="card">
+              <img src="<?= htmlspecialchars($blog['image']) ?>" alt="<?= htmlspecialchars($blog['title']) ?>" onerror="this.src='images/ground.avif'">
+              <div class="card-text">
+                <div class="category"><?= htmlspecialchars(strtoupper($blog['category'])) ?></div>
+                <div class="title"><?= htmlspecialchars(strtoupper($blog['title'])) ?></div>
+              </div>
+            </div>
+            <?php endwhile; ?>
+        <?php else: ?>
+            <p style="text-align:center; width:100%;">No blog posts available at the moment.</p>
+        <?php endif; ?>
     </div>
 
     <?php include 'footer.php'; ?>
