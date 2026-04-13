@@ -12,7 +12,7 @@ if (isset($_SESSION['userLoggedIn']) && $_SESSION['userLoggedIn'] === true) {
         
 
         <title>Home</title>
-        <link rel="stylesheet" href="style.css?v=7">
+        <link rel="stylesheet" href="style.css?v=9">
        
         <script src="script.js"></script>
         <style>
@@ -22,16 +22,12 @@ if (isset($_SESSION['userLoggedIn']) && $_SESSION['userLoggedIn'] === true) {
     <body>
     <?php include 'header.php'; ?>
         <main class="image-container">
-            
-           <video autoplay muted loop>
-                <source src="images/STG_boost.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-                <div class="center-text">
+            <img src="images/bg4.jpg" alt="Gym Banner" class="hero-bg-img">
+            <div class="hero-overlay"></div>
+            <div class="center-text">
                 <h1>Welcome to Our Gym</h1>
                 <p>Join us for a healthier lifestyle!</p>
                 <button class="home-button"><a href="Page4.php" style="text-decoration: none; color: #000;">Get Started</a></button>
-                
             </div>
         </main>
 

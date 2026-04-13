@@ -8,26 +8,25 @@ if (isset($_SESSION['adminLoggedIn']) && $_SESSION['adminLoggedIn'] === true) {
     exit;
 }
 
+// ── Hardcoded Admin Credentials ──────────────────────
+define('ADMIN_USERNAME', 'admin');
+define('ADMIN_PASSWORD', 'admin123');
+// ─────────────────────────────────────────────────────
+
 $error_message = '';
 
 // Handle Login Submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $conn->real_escape_string($_POST['username']);
-    $password = $_POST['password'];
+    $username = trim($_POST['username']);
+    $password = trim($_POST['password']);
 
-    $result = $conn->query("SELECT * FROM admin_users WHERE username = '$username'");
-    if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-        if (password_verify($password, $row['password'])) {
-            $_SESSION['adminLoggedIn'] = true;
-            $_SESSION['adminUser']     = $username;
-            header("Location: admin_panel.php");
-            exit;
-        } else {
-            $error_message = "Invalid password.";
-        }
+    if ($username === ADMIN_USERNAME && $password === ADMIN_PASSWORD) {
+        $_SESSION['adminLoggedIn'] = true;
+        $_SESSION['adminUser']     = $username;
+        header("Location: admin_panel.php");
+        exit;
     } else {
-        $error_message = "Username not found.";
+        $error_message = "Invalid username or password.";
     }
 }
 ?>
